@@ -21,7 +21,7 @@ public class Goal : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Goal"))
         {
-            SceneManager.LoadScene("Title", LoadSceneMode.Single);
+            SceneManager.LoadScene("GameClearScene", LoadSceneMode.Single);
         }
     }
 }
