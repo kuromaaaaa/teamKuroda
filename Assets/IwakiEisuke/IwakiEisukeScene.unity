@@ -626,6 +626,100 @@ MonoBehaviour:
   player: {fileID: 1468214034}
   min: 0
   max: 100
+--- !u!1 &731812284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2894440833545234481, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+  m_PrefabInstance: {fileID: 734838429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &731812288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731812284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c0026199405a84492a3a08145a5a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1468214034}
+--- !u!1001 &734838429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2363753812622360921, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363753812622360921, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: TrailModule.colorOverTrail.maxColor.b
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363753812622360921, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: TrailModule.colorOverTrail.maxColor.g
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363753812622360921, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: TrailModule.colorOverTrail.maxColor.r
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894440833545234481, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_Name
+      value: Rain
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.52999973
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99314666
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.11687504
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420915474676233945, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -13.424
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2894440833545234481, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 731812288}
+  m_SourcePrefab: {fileID: 100100000, guid: 75a218c13fb74d74ea1633798987079a, type: 3}
 --- !u!1 &798101091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,7 +1398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8dc396e00aa1640bf41aff7b229b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
+  maxHP: 1000
   gameoverEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6597,6 +6691,7 @@ Tilemap:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 734838429}
   - {fileID: 616277334}
   - {fileID: 1400466525}
   - {fileID: 1468214038}
