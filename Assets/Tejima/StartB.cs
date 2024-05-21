@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Goal : MonoBehaviour
+public class StartB : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,12 +16,8 @@ public class Goal : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter(Collider other)
+    public void StartButton()
     {
-        if (other.gameObject.CompareTag("Goal"))
-        {
-            SceneManager.LoadScene("Title", LoadSceneMode.Single);
-        }
+        SceneManager.LoadScene("GameClearScene", LoadSceneMode.Single);
     }
 }
