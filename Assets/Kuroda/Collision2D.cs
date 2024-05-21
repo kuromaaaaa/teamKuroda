@@ -12,14 +12,22 @@ public class Collision2D : MonoBehaviour
 
     private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if(collision.gameObject.tag == tagName)
+        if (tagName != string.Empty && collision.gameObject.tag == tagName)
+        {
+            enter.Invoke();
+        }
+        else if (tagName == string.Empty)
         {
             enter.Invoke();
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == tagName)
+        if (tagName != string.Empty && collision.gameObject.tag == tagName)
+        {
+            stay.Invoke();
+        }
+        else if (tagName == string.Empty)
         {
             stay.Invoke();
         }
@@ -27,7 +35,11 @@ public class Collision2D : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == tagName)
+        if (tagName != string.Empty && collision.gameObject.tag == tagName)
+        {
+            exit.Invoke();
+        }
+        else if (tagName == string.Empty)
         {
             exit.Invoke();
         }
