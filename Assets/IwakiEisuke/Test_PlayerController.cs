@@ -47,7 +47,7 @@ public class Test_PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -55,7 +55,7 @@ public class Test_PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(UnityEngine.Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
