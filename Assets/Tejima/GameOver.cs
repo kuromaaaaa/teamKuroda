@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Goal : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
+    [SerializeField] GameObject _GameOverPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,11 @@ public class Goal : MonoBehaviour
     {
         
     }
-
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Goal"))
+        if (other.gameObject.CompareTag("Out"))
         {
-            SceneManager.LoadScene("GameClearScene", LoadSceneMode.Single);
+            _GameOverPanel.SetActive(true);
         }
     }
 }

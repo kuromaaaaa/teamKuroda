@@ -18,6 +18,6 @@ public class StartB : MonoBehaviour
     }
     public void StartButton()
     {
-        SceneManager.LoadScene("GameClearScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
     }
 }
