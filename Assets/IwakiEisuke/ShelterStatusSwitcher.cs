@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class ShelterStatusSwitcher : MonoBehaviour
 {
-    public Sprite shelterOpen;
-    public Sprite shelterClose;
-    public float switchTime;
+    [SerializeField] Sprite shelterOpen;
+    [SerializeField] Sprite shelterClose;
+    [SerializeField] float[] switchTime;
 
     SpriteRenderer shelterRenderer;
-    Collider2D shelterCollider;
-    // Start is called before the first frame update
+    Collider2D shelterTrigger, shelterCollision;
+    int switchIndex;
 
     void Start()
     {
         shelterRenderer = GetComponent<SpriteRenderer>();
-        shelterCollider = GetComponent<Collider2D>();
+        shelterTrigger = GetComponent<BoxCollider2D>();
+        shelterCollision = GetComponent<PolygonCollider2D>();
         StartCoroutine(Switch());
     }
 
     IEnumerator Switch()
     {
-        Debug.Log("a");
         SwitchStatus();
-        yield return new WaitForSeconds(switchTime);
+        yield return new WaitForSeconds(switchTime[switchIndex]);
+        switchIndex = (switchIndex + 1) % switchTime.Length;
         StartCoroutine(Switch());
     }
 
@@ -32,12 +33,14 @@ public class ShelterStatusSwitcher : MonoBehaviour
         if (shelterRenderer.sprite == shelterOpen)
         {
             shelterRenderer.sprite = shelterClose;
-            shelterCollider.enabled = false;
+            shelterTrigger.enabled = false;
+            shelterCollision.enabled = false;
         }
         else
         {
             shelterRenderer.sprite = shelterOpen;
-            shelterCollider.enabled = true;
+            shelterTrigger.enabled = true;
+            shelterCollision.enabled = true;
         }
     }
 }

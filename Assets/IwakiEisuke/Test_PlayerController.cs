@@ -5,10 +5,9 @@ using UnityEngine;
 public class Test_PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float jumpForce;
-    public float speed;
-    public bool canJump;
-    public SpriteRenderer debug_renderer;
+    [SerializeField] float jumpForce, speed;
+    [SerializeField] bool canJump, inShelter;
+    [SerializeField] SpriteRenderer debug_renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +24,16 @@ public class Test_PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             canJump = false;
         }
+
+        //inShelter Ç™ true => âÒïú : false => å∏è≠
+        HP.hp += inShelter ? Time.deltaTime : -Time.deltaTime;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Shelter"))
         {
+            inShelter = true;
             debug_renderer.enabled = true;
         }
     }
@@ -39,6 +42,7 @@ public class Test_PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Shelter"))
         {
+            inShelter = false;
             debug_renderer.enabled = false;
         }
     }

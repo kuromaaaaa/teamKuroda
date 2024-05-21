@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Test_CameraController : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField] GameObject player;
+    [SerializeField] float min, max;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x, 0, -10);
+        transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, min, max), 0, -10);
     }
 }
