@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TimeManager : MonoBehaviour
 {
     [SerializeField, Header("制限時間")]
-    float timer = 30f;
-    public float Timer { get { return timer; } }
-    static TimeManager instance;
-    static public TimeManager Instance { get { return instance; } }
+    float _timer = 30f;
+    public float Timer { get { return _timer; } }
+    static TimeManager _instance;
+    static public TimeManager Instance { get { return _instance; } }
 
-    [SerializeField] bool gameOver = false;
+    [SerializeField] bool _timerStop = false;
+    [SerializeField] UnityEvent _gameOver;
     // Start is called before the first frame update
     void Start()
     {
-        if(instance != null)
+        if(_instance != null)
         {
-            Destroy(instance);
+            Destroy(_instance.gameObject);
         }
-        instance = this;
+        _instance = this;
         //前にあったものを破壊
         DontDestroyOnLoad(gameObject);
     }
@@ -27,14 +29,21 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!gameOver)
+        if(!_timerStop)
         {
-            timer -= Time.deltaTime;
+            _timer -= Time.deltaTime;
+        }
+        if(!_timerStop && _timer < 0)
+        {
+            //タイムオーバー
+            TimerStop();
+            _timer = 0;
+            _gameOver.Invoke();
         }
     }
 
-    public void GameOver()
+    public void TimerStop()
     {
-        gameOver = true;
+        _timerStop = true;
     }
 }
