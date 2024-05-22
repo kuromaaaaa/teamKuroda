@@ -572,6 +572,166 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: shelter_big_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3.9392166, y: 4.9313087}
+        - {x: -4.0766068, y: -8}
+        - {x: 1.1452942, y: -8}
+        - {x: 1.0766068, y: 4.9313087}
+        - {x: 1, y: 5.076603}
+        - {x: -4.068695, y: 5.076603}
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2df8b5bcffdb746855f9ce885c5bb6
+      internalID: -1958830108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shelter_big_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -0.92632294, y: 4.884794}
+        - {x: -0.9263153, y: -8}
+        - {x: 4.203232, y: -8}
+        - {x: 4.0766068, y: 5.068695}
+        - {x: 4.068695, y: 5.076599}
+        - {x: -0.7939148, y: 5.007908}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8bc590c1a27064abd66e0520fb7c8b
+      internalID: -1229385416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shelter_big_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4.063698, y: -1.5760231}
+        - {x: -4.041519, y: -8}
+        - {x: 0.92632294, y: -8}
+        - {x: 0.9263153, y: 0.88479614}
+        - {x: 0.9534836, y: 0.99500847}
+        - {x: -0.5391846, y: 1.0415192}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5144247adf85894ab90c00a9a7b6647
+      internalID: 1448179677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shelter_big_23
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0.78601074, y: 0.99500847}
+        - {x: -1.0415268, y: 1.0443573}
+        - {x: -1.0858917, y: -8}
+        - {x: 4.041527, y: -8}
+        - {x: 4.017189, y: -1.7280693}
+        - {x: 3.7280731, y: -1.6081867}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcad56714eb3f9499674b40a604f6af
+      internalID: -680501063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shelter_big_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 8}
+        - {x: 4, y: 8}
+        - {x: 8, y: 4}
+        - {x: 8, y: 4}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0b931fc3bac374e9c16c0c461c4417
+      internalID: -1268342939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shelter_big_25
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: 4}
+        - {x: -8, y: 4}
+        - {x: -4, y: 8}
+        - {x: -4, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbc0ac333cac014eba16fd7d7320518
+      internalID: 878284245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -596,6 +756,12 @@ TextureImporter:
       shelter_big_18: -1209813647
       shelter_big_19: -1963575218
       shelter_big_2: 400560213
+      shelter_big_20: -1958830108
+      shelter_big_21: -1229385416
+      shelter_big_22: 1448179677
+      shelter_big_23: -680501063
+      shelter_big_24: -1268342939
+      shelter_big_25: 878284245
       shelter_big_3: -265593039
       shelter_big_4: -1682859223
       shelter_big_5: -1343036642
