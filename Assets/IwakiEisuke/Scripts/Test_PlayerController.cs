@@ -7,7 +7,7 @@ public class Test_PlayerController : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] float jumpForce, speed;
     [SerializeField] bool canJump, inShelter;
-    [SerializeField] SpriteRenderer debug_renderer;
+    //[SerializeField] SpriteRenderer debug_renderer;
 
     bool _wJump = false;
 
@@ -37,7 +37,7 @@ public class Test_PlayerController : MonoBehaviour
         if (collision.CompareTag("Shelter"))
         {
             inShelter = true;
-            debug_renderer.enabled = true;
+            //debug_renderer.enabled = true;
         }
 
     }
@@ -47,7 +47,7 @@ public class Test_PlayerController : MonoBehaviour
         if (collision.CompareTag("Shelter"))
         {
             inShelter = false;
-            debug_renderer.enabled = false;
+            //debug_renderer.enabled = false;
         }
     }
 
