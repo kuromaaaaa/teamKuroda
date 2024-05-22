@@ -19,7 +19,7 @@ public class wjump : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.GetComponent<PlayerMove>().GetItem();
+        collision.gameObject.GetComponent<Test_PlayerController>().GetItem();
         StartCoroutine(GottenItem());  
     }
     private IEnumerator GottenItem()
