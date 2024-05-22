@@ -6,7 +6,11 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D _rb;
     [SerializeField] float _spead = 3;
+    [SerializeField] float _Spead = 1;
+    [SerializeField] float _jampPower = 1000;
     bool _isGround = true;
+    bool _wJump = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,27 +20,42 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        int h = 0;
         {
-            _rb.velocity = new Vector2(1 * _spead, _rb.velocity.y);
+            if (Input.GetKey(KeyCode.D))
+            {
+                h += 1;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                h -= 1;
+            }
+            _rb.AddForce(new Vector2(h * _spead * Time.deltaTime, 0), ForceMode2D.Force);
+
+            if (Input.GetKeyDown(KeyCode.Space) && (_isGround ||_wJump))
+            {
+                _isGround = false;
+                _rb.AddForce(new Vector2(0, _jampPower));
+                _wJump = false;
+            }
+            
+            
         }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            _rb.velocity = new Vector2(-1 * _spead, _rb.velocity.y);
-        }
-        else
-        {
-            _rb.velocity = new Vector2(0, _rb.velocity.y);
-        }
-        if (Input.GetKey(KeyCode.Space) && _isGround)
-        {
-            _isGround = false;
-            _rb.AddForce(new Vector2(0, 500));
-        }
+       
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("’…’n");
+        _isGround = true;
+        _wJump = false;
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        _isGround=true;
+        _isGround =false;
+    }
+    public void GetItem()
+    {
+        _wJump = true;
     }
 }
