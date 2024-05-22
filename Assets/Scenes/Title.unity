@@ -332,7 +332,7 @@ Animator:
   m_GameObject: {fileID: 355274209}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c8bc012746cd24a4ca81ecad79d0773c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 236129cfbc110f04ea032f6df9dc4db8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2132,7 +2132,7 @@ PrefabInstance:
     - target: {fileID: 6877414993069202844, guid: 099044d2f58bdfb4a9c79cc6ae8286b7, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 436e74f3171f15542a021ab86f985a41, type: 2}
+      objectReference: {fileID: 9100000, guid: 888599db0142e4f4db27f31566739101, type: 2}
     - target: {fileID: 7604992916411002652, guid: 099044d2f58bdfb4a9c79cc6ae8286b7, type: 3}
       propertyPath: m_Name
       value: Panel
