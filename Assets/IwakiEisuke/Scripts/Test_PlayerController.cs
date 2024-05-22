@@ -9,6 +9,8 @@ public class Test_PlayerController : MonoBehaviour
     [SerializeField] bool canJump, inShelter;
     [SerializeField] SpriteRenderer debug_renderer;
 
+    bool _wJump = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,11 @@ public class Test_PlayerController : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        if (Input.GetKeyDown(KeyCode.Space) && (canJump || _wJump))
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             canJump = false;
+            _wJump = false;
         }
 
         //inShelter Ç™ true => âÒïú : false => å∏è≠
@@ -36,6 +39,7 @@ public class Test_PlayerController : MonoBehaviour
             inShelter = true;
             debug_renderer.enabled = true;
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -52,6 +56,7 @@ public class Test_PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = true;
+            _wJump = false;
         }
     }
 
@@ -61,5 +66,10 @@ public class Test_PlayerController : MonoBehaviour
         {
             canJump = false;
         }
+    }
+
+    public void GetItem()
+    {
+        _wJump = true;
     }
 }
